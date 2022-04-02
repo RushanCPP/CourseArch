@@ -6,8 +6,8 @@ public class CountTask extends Task {
     Number ans;
     Number[] numbers;
 
-    public CountTask(String text, TaskDisplayBehavior taskDisplayBehavior, Function<Number[], Number> func, Number... numbers) {
-        super(text, taskDisplayBehavior);
+    public CountTask(String text, TaskDisplayBehavior taskDisplayBehavior, int score, Function<Number[], Number> func, Number... numbers) {
+        super(text, taskDisplayBehavior, score);
         this.numbers = numbers;
         this.ans = func.apply(numbers);
     }

@@ -3,12 +3,23 @@ package com.company.course.paragraph.lessons;
 public abstract class Lesson {
     protected String name;
     protected boolean accepted;
-    LessonDisplayBehavior displayBehavior;
+    protected LessonDisplayBehavior displayBehavior;
 
-    public Lesson(String name, LessonDisplayBehavior lessonDisplayBehavior) {
+    protected int score;
+
+    public Lesson(String name, LessonDisplayBehavior lessonDisplayBehavior, int score) {
         this.name = name;
         this.accepted = false;
         this.displayBehavior = lessonDisplayBehavior;
+        this.score = score;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 
     public abstract boolean isAccepted();

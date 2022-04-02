@@ -5,7 +5,9 @@ public abstract class Task {
     protected String text;
     protected TaskDisplayBehavior taskDisplayBehavior;
 
-    public Task(String text, TaskDisplayBehavior taskDisplayBehavior) {
+    protected int score;
+
+    public Task(String text, TaskDisplayBehavior taskDisplayBehavior, int score) {
         this.text = text;
         this.accepted = false;
         this.taskDisplayBehavior = taskDisplayBehavior;
@@ -31,5 +33,13 @@ public abstract class Task {
 
     public void display() {
         taskDisplayBehavior.display(this);
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }

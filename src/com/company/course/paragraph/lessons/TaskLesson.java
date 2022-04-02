@@ -5,8 +5,8 @@ import com.company.course.paragraph.lessons.tasks.Task;
 public class TaskLesson extends Lesson {
     Task task;
 
-    public TaskLesson(String name, Task task, LessonDisplayBehavior lessonDisplayBehavior) {
-        super(name, lessonDisplayBehavior);
+    public TaskLesson(String name, Task task, int score, LessonDisplayBehavior lessonDisplayBehavior) {
+        super(name, lessonDisplayBehavior, score);
         this.task = task;
     }
 

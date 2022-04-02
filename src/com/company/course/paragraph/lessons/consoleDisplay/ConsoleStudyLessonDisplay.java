@@ -10,6 +10,7 @@ public class ConsoleStudyLessonDisplay implements LessonDisplayBehavior {
     public void display(Lesson lesson) {
         System.out.println("Название: " + lesson.getName());
         System.out.println("Сдан: " + lesson.isAccepted());
+        System.out.println("Баллы: " + lesson.getScore());
         if (lesson instanceof StudyLesson) {
             System.out.println("Тема: " + ((StudyLesson) lesson).getText());
         }

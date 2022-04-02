@@ -8,6 +8,7 @@ public class ConsoleParagraphDisplayBehavior implements ParagraphDisplayBehavior
     @Override
     public void display(Paragraph paragraph) {
         System.out.println("Название: " + paragraph.getName());
+        System.out.println("Баллы: "+ paragraph.getScore());
         System.out.println("Уроки:");
         for (Lesson lesson : paragraph.getLessons()) {
             lesson.display();

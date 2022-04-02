@@ -9,6 +9,7 @@ public class ConsoleCountTaskDisplayBehavior implements TaskDisplayBehavior {
     public void display(Task task) {
         System.out.println("Текст: " + task.getText());
         System.out.println("Сдан: " + task.isAccepted());
+        System.out.println("Баллы: " + task.getScore());
         if (task instanceof CountTask) {
             System.out.println("(Введите дробные числа через точку)");
         }

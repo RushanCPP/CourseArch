@@ -11,6 +11,7 @@ public class ConsoleTaskLessonDisplay implements LessonDisplayBehavior {
     public void display(Lesson lesson) {
         System.out.println("Название: " + lesson.getName());
         System.out.println("Сдан: " + lesson.isAccepted());
+        System.out.println("Баллы: " + lesson.getScore());
         System.out.println("Задания: ");
         if (lesson instanceof TaskLesson) {
             Task task = ((TaskLesson) lesson).getTask();

@@ -10,6 +10,7 @@ public class ConsoleTestTaskDisplayBehavior implements TaskDisplayBehavior {
     public void display(Task task) {
         System.out.println("Текст: " + task.getText());
         System.out.println("Сдан: " + task.isAccepted());
+        System.out.println("Баллы: " + task.getScore());
         if (task instanceof TestTask) {
             System.out.println("Варианты:");
             int i = 0;

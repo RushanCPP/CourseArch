@@ -5,14 +5,25 @@ import com.company.course.paragraph.lessons.Lesson;
 import java.util.ArrayList;
 
 public class Paragraph {
-    ArrayList<Lesson> lessons;
-    ParagraphDisplayBehavior paragraphDisplayBehavior;
-    String name;
+    private ArrayList<Lesson> lessons;
+    private ParagraphDisplayBehavior paragraphDisplayBehavior;
+    private String name;
 
-    public Paragraph(String name, ArrayList<Lesson> lessons, ParagraphDisplayBehavior paragraphDisplayBehavior) {
+    private int score;
+
+    public Paragraph(String name, ArrayList<Lesson> lessons, int score, ParagraphDisplayBehavior paragraphDisplayBehavior) {
         this.name = name;
         this.lessons = lessons;
         this.paragraphDisplayBehavior = paragraphDisplayBehavior;
+        this.score = score;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 
     public String getName() {
