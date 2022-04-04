@@ -28,7 +28,7 @@ public class Main {
         ArrayList<Lesson> lessonArrayList = new ArrayList<>();
         lessonArrayList.add(lesson);
         lessonArrayList.add(lesson1);
-        Paragraph paragraph = new Paragraph("Математика 5 класс 1 четверть", lessonArrayList, 1, new ConsoleParagraphDisplayBehavior());
+        Paragraph paragraph = new Paragraph("Математика 5 класс 1 четверть", lessonArrayList, new ConsoleParagraphDisplayBehavior());
 
         ArrayList<String> variants1 = new ArrayList<>();
         variants1.add("Один");
@@ -41,13 +41,11 @@ public class Main {
         ArrayList<Lesson> lessonArrayList1 = new ArrayList<>();
         lessonArrayList1.add(lesson11);
         lessonArrayList1.add(lesson12);
-        Paragraph paragraph1 = new Paragraph("Математика 11 класс 4 четверть", lessonArrayList1, 1, new ConsoleParagraphDisplayBehavior());
+        Paragraph paragraph1 = new Paragraph("Математика 11 класс 4 четверть", lessonArrayList1, new ConsoleParagraphDisplayBehavior());
 
-        ArrayList<Paragraph> paragraphs = new ArrayList<>();
-        paragraphs.add(paragraph);
-        paragraphs.add(paragraph1);
-
-        Course course = new Course(paragraphs, "Подготовка к ЕГЭ", "Бурят с ютуба", new ConsoleCourseDisplayBehavior());
+        Course course = new Course("Подготовка к ЕГЭ", "Бурят с ютуба", new ConsoleCourseDisplayBehavior());
+        course.addParagraph(paragraph);
+        course.addParagraph(paragraph1);
         course.display();
     }
 }
